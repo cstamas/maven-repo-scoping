@@ -27,20 +27,46 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.cstamas.overlap</groupId>
-      <artifactId>dep1</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <!--dependency>
-      <groupId>org.cstamas.disjunct</groupId>
-      <artifactId>dep1</artifactId>
-      <version>1.0.0</version>
-    </dependency-->
-    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>overlap</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>org.cstamas.overlap</groupId>
+          <artifactId>dep1</artifactId>
+          <version>1.0.0</version>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>disjunct</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.cstamas.disjunct</groupId>
+          <artifactId>dep1</artifactId>
+          <version>1.0.0</version>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>central</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <name>Central override from POM</name>
+          <url>https://www.cstamas.org/repo1</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
 </project>
