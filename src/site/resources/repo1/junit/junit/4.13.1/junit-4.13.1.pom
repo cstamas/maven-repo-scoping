@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.1</version>
+
+    <name>modified JUnit POM</name>
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central overridden by dependency</name>
+      <url>http://localhost/dependency-overridden-central-before/</url>
+    </repository>
+    <repository>
+      <id>dependency-injected</id>
+      <name>Repository injected by dependency</name>
+      <url>http://localhost/junit-dependency-injected/</url>
+    </repository>
+    <repository>
+      <id>central</id>
+      <name>Central overridden by dependency</name>
+      <url>http://localhost/dependency-overridden-central-after/</url>
+    </repository>
+  </repositories>
+
+    <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>missing-dep</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+    </dependencies>
+</project>
