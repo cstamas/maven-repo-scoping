@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<settings>
+  <profiles>
+    <profile>
+	  <id>global-repo</id>
+	  <repositories>
+		<repository>
+		  <id>global</id>
+		  <url>http://localhost/norepo</url>
+		</repository>
+	  </repositories>
+	</profile>
+  </profiles>
+  <activeProfiles>
+   <activeProfile>global-repo</activeProfile>
+ </activeProfiles>
+</settings>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<settings>
+  <localRepository>./local</localRepository>
+  <profiles>
+    <profile>
+	  <id>user-repo</id>
+	  <repositories>
+		<repository>
+		  <id>user</id>
+		  <url>http://localhost/norepo</url>
+		</repository>
+	  </repositories>
+	</profile>
+  </profiles>
+  <activeProfiles>
+   <activeProfile>user-repo</activeProfile>
+  </activeProfiles>
+</settings>
